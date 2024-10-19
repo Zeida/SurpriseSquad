@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #4CAF50; /* Color verde */
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  .game-selection {
+    text-align: center;
+  }
+  
+  .game-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .game-option {
+    text-decoration: none;
+    color: inherit;
+    width: 30%;
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .game-option img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .game-option h3 {
+    margin-top: 10px;
+  }
+  
+  .game-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
