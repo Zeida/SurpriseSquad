@@ -1,0 +1,35 @@
+---
+import { games } from "../const";
+
+const { id } = Astro.props;
+const game = games.find((g) => g.id === id);
+
+if (!game) {
+  throw new Error("Juego no encontrado");
+}
+---
+
+<div class="game-form-container">
+  <div class="game-info">
+    <img src={game.image} alt={game.title} />
+    <h2>{game.title}</h2>
+    <p>{game.description}</p>
+    <p><strong>Mínimo de jugadores:</strong> {game.minPlayers}</p>
+    <p><strong>Máximo de jugadores:</strong> {game.maxPlayers}</p>
+    <h3>{game.funMessage}</h3>
+  </div>
+  <div class="player-form">
+    <h2>¡Inscribamos a los jugadores!</h2>
+    <form>
+      <div class="player-inputs">
+        <label for="player1-name">Nombre del jugador 1:</label>
+        <input type="text" id="player1-name" name="player1-name" required />
+        <label for="player1-email">Email del jugador 1:</label>
+        <input type="email" id="player1-email" name="player1-email" required />
+        <!-- Aquí se añadirán dinámicamente más campos -->
+      </div>
+      <button type="button" class="add-player">+ Añadir jugador</button>
+      <button type="submit">Crear Juego</button>
+    </form>
+  </div>
+</div>

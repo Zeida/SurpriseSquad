@@ -1,0 +1,69 @@
+---
+// GameForm.astro
+import { games } from "../const";
+
+const { id } = Astro.props; // ID del juego
+const game = games.find((g) => g.id === id);
+
+if (!game) {
+  throw new Error("Juego no encontrado");
+}
+---
+
+<div class="game-form-container">
+  <div class="game-info">
+    <img src={game.image} alt={game.title} />
+    <h2>{game.title}</h2>
+    <p>{game.description}</p>
+    <p><strong>Mínimo de jugadores:</strong> {game.minPlayers}</p>
+    <p><strong>Máximo de jugadores:</strong> {game.maxPlayers}</p>
+    <h3>{game.funMessage}</h3>
+  </div>
+  <div class="player-form">
+    <h2>¡Inscribamos a los jugadores!</h2>
+    <form>
+      <div class="player-inputs">
+        <label for="player1-name">Nombre del jugador 1:</label>
+        <input type="text" id="player1-name" name="player1-name" required />
+        <label for="player1-email">Email del jugador 1:</label>
+        <input type="email" id="player1-email" name="player1-email" required />
+        <!-- Agregar más campos según se necesiten -->
+      </div>
+      <button type="button" class="add-player">+ Añadir jugador</button>
+      <button type="submit">Crear Juego</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .game-form-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .game-info {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+  }
+  .player-form {
+    flex: 1;
+    text-align: left;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+  }
+  img {
+    width: 100%; /* Ajustar imagen al 100% del contenedor */
+    height: auto;
+    border-radius: 10px;
+  }
+  h2 {
+    color: #333;
+  }
+  .player-inputs {
+    margin-bottom: 15px;
+  }
+  .add-player {
+    margin-top: 10px;
+  }
+</style>

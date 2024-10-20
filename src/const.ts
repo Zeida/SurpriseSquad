@@ -1,0 +1,32 @@
+export const games = [
+  {
+    id: 'amigo-invisible',
+    title: 'Amigo Invisible',
+    image: '/images/invisible-friend.png',
+    alt: 'Imagen del juego Amigo Invisible',
+    description: '¡Diviértete intercambiando regalos y sorpresas con amigos! ¡La emoción está en el aire!',
+    minPlayers: 4,
+    maxPlayers: 20,
+    funMessage: '¡Vamos a hacer que la sorpresa sea inolvidable!',
+  },
+  {
+    id: 'fiesta-tematica',
+    title: 'Fiesta Temática',
+    image: '/images/costumes-party.png',
+    alt: 'Imagen del juego Fiesta Temática',
+    description: '¡Dale rienda suelta a tu creatividad! Viste a tus amigos con locos disfraces y prepárate para una noche inolvidable.',
+    minPlayers: 5,
+    maxPlayers: 15,
+    funMessage: '¡El disfraz más divertido gana un premio!',
+  },
+  {
+    id: 'fiesta-color',
+    title: 'Fiesta de Color',
+    image: '/images/thematic-party.png',
+    alt: 'Imagen del juego Fiesta de Color',
+    description: 'Fiesta de Colores: ¡Celebra la Diversión en Cada Tono! Cada invitado elige un color y lleva un aperitivo que refleje esa elección. ¡Risas, creatividad y buen rollo garantizados!',
+    minPlayers: 2,
+    maxPlayers: 10,
+    funMessage: '¡Que empiece la batalla de colores!',
+  },
+];

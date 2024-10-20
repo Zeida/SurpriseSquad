@@ -1,0 +1,17 @@
+---
+// src/components/GameOption.astro
+const { game } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<a href={`/formulario/${game.id}`} class="game-option">
+  <!-- Enlace a la página del formulario -->
+  <Image
+    src={game.image}
+    alt={game.alt}
+    width="150"
+    height="100"
+    loading="eager"
+  />
+  <h3>{game.title}</h3>
+</a>

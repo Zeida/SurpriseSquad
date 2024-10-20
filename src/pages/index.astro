@@ -1,32 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
-import { Image } from 'astro:assets';
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import GameOption from '../components/GameOption.astro';
+import {games} from '../const';
 ---
 
 <Layout title="¡Bienvenido a Surprise Squad!">
-  <main class="container">
-    <header>
-      <h1>¡Bienvenidos a Surprise Squad!</h1>
-      <p>El lugar perfecto para organizar fiestas temáticas y juegos de grupo.</p>
-    </header>
-
+  <main class="wrapper" >
+    <Header />
+    <div class="container">
     <section class="game-selection">
-      <h2>Selecciona un tipo de juego</h2>
+      <h1>¡Bienvenidos a Surprise Squad!</h1>
+      <p>
+        El lugar perfecto para organizar fiestas temáticas y juegos de grupo.
+      </p>
+      <h3>Selecciona un tipo de fiesta o juego</h3>
       <div class="game-options">
-        <a href="/amigo-invisible" class="game-option">
-          <img src="/images/invisible-friend.png" alt="Amigo Invisible" />
-          <h3>Amigo Invisible</h3>
-        </a>
-        <a href="/fiesta-tematica" class="game-option">
-          <img src="/images/costumes-party.png" alt="Fiesta Temática" />
-          <h3>Fiesta Temática</h3>
-        </a>
-        <a href="/fiesta-color" class="game-option">
-          <img src="/images/thematic-party.png" alt="Fiesta de Color" />
-          <h3>Fiesta de Color</h3>
-        </a>
+        {games.map(game => (
+          <GameOption game={game} key={game.id} /> <!-- Agregar key para mejorar rendimiento -->
+        ))}
       </div>
     </section>
+    <Footer/>
+  </div>
   </main>
 </Layout>

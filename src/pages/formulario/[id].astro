@@ -1,0 +1,81 @@
+---
+import "../../styles/global.css";
+import { games } from '../../const';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return games.map(game => ({
+    params: { id: game.id },
+  }));
+}
+
+const { id } = Astro.params;
+const game = games.find(g => g.id === id); 
+---
+
+<Layout title= {`${game.title} | SurpriseSquad`}>
+    <Header />
+    <main>
+      <div class="game-form-wrapper">
+        <div class="game-description">
+          {game ? (
+            <div class="game-card">
+              <img id="game-image" src={game.image} alt={game.alt} class="game-image" height="450px" width="450px"/>
+              <h1 class="game-title">{game.title}</h1>
+              <p class="game-description-text">{game.description}</p>
+            </div>
+          ) : (
+            <h1>Juego no encontrado</h1>
+          )}
+        </div>
+  
+        <div class="game-form">
+          <!-- contenido del formulario -->
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </Layout>
+  
+
+<style>
+.game-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.game-description {
+  flex: 1;
+  min-width: 300px; 
+  padding: 20px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; 
+  border-radius: 8px; 
+  margin-right: 20px; 
+  text-align: center;
+}
+
+.game-form {
+  flex: 1; 
+  min-width: 300px; 
+  padding: 20px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; 
+  border-radius: 8px; 
+}
+
+@media screen and (max-width: 768px) {
+  .game-form-wrapper {
+    flex-direction: column; 
+  }
+
+  .game-description {
+    margin-right: 0; 
+    margin-bottom: 20px; 
+  }
+}
+
+</style>
