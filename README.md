@@ -1,54 +1,60 @@
-# Astro Starter Kit: Basics
+# 🎉 SurpriseSquad 🎉  <span style="color: orange;">🛠️ Aun en proceso de desarrollo  🛠️</span>
 
-```sh
-npm create astro@latest -- --template basics
-```
+## 🎈 Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+¡Bienvenido a **SurpriseSquad**! 🎊 Tu plataforma ideal para organizar juegos sociales que garantizan risas y diversión. Desde el clásico **Amigo Invisible** hasta la colorida **Fiesta de Colores**, aquí encontrarás todo lo que necesitas para hacer de tu evento algo memorable. ¡Prepárate para la sorpresa!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🌟 Características
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **🎁 Amigo Invisible**: ¡Intercambia regalos de forma divertida y sorprendente!
+- **🎭 Fiesta Temática**: Viste a tus amigos con los disfraces más locos. ¡El tema lo eliges tú!
+- **🌈 Fiesta de Colores**: Cada invitado elige un color y trae un aperitivo que lo represente. ¡Diversión garantizada!
 
-## 🚀 Project Structure
+## 🛠️ Tecnologías Utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Astro**: 🚀 Un generador de sitios estáticos que hace que tu web sea rápida y ligera.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Instalación
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. **Clona el repositorio**:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+       git clone https://github.com/Zeida/SurpriseSquad.git
+       cd surprisesquad
+   
+2. **Instala las dependencias**:
 
-Any static assets, like images, can be placed in the `public/` directory.
+       npm install
 
-## 🧞 Commands
+3. **Inicia el servidor de desarrollo**:
 
-All commands are run from the root of the project, from a terminal:
+       npm run dev
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+4. Abre tu navegador y ve a http://localhost:4321/. 🌐
 
-## 👀 Want to learn more?
+## 🤝 Contribución
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+¡Las contribuciones son más que bienvenidas! Si quieres añadir tu magia a este proyecto, sigue estos pasos:
+
+1. Haz un fork del repositorio. 🍴
+2. Crea una nueva rama para tu función:
+
+       git checkout -b mi-nueva-caracteristica
+
+3. Realiza tus cambios y haz commit:
+
+       git commit -m 'Agrega una nueva característica'
+   
+4. Envía tu rama:
+
+       git push origin mi-nueva-caracteristica
+
+5. Abre un Pull Request. 🔄
+
+## 📧 Contacto
+Si tienes preguntas o sugerencias, no dudes en contactarme:
+
+- Correo: zeidaromen@outlook.es
+- GitHub: https://github.com/Zeida
+
+¡Gracias por visitar SurpriseSquad! 🎉 Que comience la diversión. 🎈
+
