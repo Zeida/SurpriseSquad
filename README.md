@@ -13,6 +13,7 @@
 ## 🛠️ Tecnologías Utilizadas
 
 - **Astro**: 🚀 Un generador de sitios estáticos que hace que tu web sea rápida y ligera.
+- **React.js**: Una biblioteca de JavaScript para construir interfaces de usuario interactivas y eficientes. Facilita el desarrollo de componentes reutilizables y la gestión del estado en aplicaciones web dinámicas.
 
 ## 🚀 Instalación
 
